@@ -5,6 +5,8 @@
 //Is used for signaling food ready
 class Mode : public LEDLightMode
 {
+public:
+    Mode() : LEDLightMode(true){};
 
     virtual void Init(pixelColor_t& pixelColor) override {
         //pixelColor.num = 0;

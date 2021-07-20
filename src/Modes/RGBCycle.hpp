@@ -3,6 +3,10 @@
 
 class RGBCycle : public LEDLightMode
 {
+
+public:
+    RGBCycle() : LEDLightMode(true){};
+
     bool redDown;
     bool greenDown;
     bool blueDown;

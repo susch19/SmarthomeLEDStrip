@@ -3,8 +3,10 @@
 
 class LightWander : public LEDLightMode
 {
+public:
+    LightWander() : LEDLightMode(true){};
 
-    virtual void Init(pixelColor_t& pixelColor) override {}
+    virtual void Init(pixelColor_t &pixelColor) override {}
     virtual void Run(strand_t pStrand, pixelColor_t &pixelColor, uint8_t brightness, int numberOfLeds, bool reverse, int step) override
     {
         CalcPixelColorBrightness(pixelColor, brightness);
@@ -13,5 +15,4 @@ class LightWander : public LEDLightMode
         pStrand.pixels[(numberOfLeds + step - 1) % numberOfLeds] = pixelFromRGBW(0, 0, 0, 0);
     }
     virtual void Stop() override {}
-
 };

@@ -3,6 +3,8 @@
 
 class RGBWander : public LEDLightMode
 {
+public:
+    RGBWander() : LEDLightMode(true){};
 
     virtual void Init(pixelColor_t& pixelColor) override {
         pixelColor.w = 0;

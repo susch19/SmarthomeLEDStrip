@@ -3,6 +3,8 @@
 
 class Strobo : public LEDLightMode
 {
+public:
+    Strobo() : LEDLightMode(true){};
 
     pixelColor_t none;
     virtual void Init(pixelColor_t &pixelColor) override {}

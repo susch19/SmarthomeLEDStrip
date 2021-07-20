@@ -3,6 +3,9 @@
 
 class Off : public LEDLightMode
 {
+public:
+    Off() : LEDLightMode(false){};
+
     bool alreadyRun;
     virtual void Init(pixelColor_t& pixelColor) override {
         alreadyRun = false;
