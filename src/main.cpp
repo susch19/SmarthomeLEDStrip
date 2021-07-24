@@ -5,7 +5,7 @@ LedStrip ledStrip;
 void setup()
 {
   Serial.begin(115200);
-  ledStrip.setup("ledstrip", 23, true);
+  ledStrip.setup("ledstri", 26, true);
   Serial.printf("Firmware V%d " __DATE__ "\n", ledStrip.firmwareVersion);
 }
 
